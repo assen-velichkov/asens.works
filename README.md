@@ -1,5 +1,5 @@
 # My personal portfolio website
-Yo can check the curren version of the project published at [http://asens.works](http://asens.works)
+You can check the curren version of the project published at [http://asens.works](http://asens.works)
 
 To build it I used the following tools and technologies:
 - HTML

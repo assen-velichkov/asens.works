@@ -18,28 +18,28 @@ window.onload = function () {
         });
     });
 	
-	//hover to click on mobile
+	/*//hover to click on mobile
 		//code circles
 	function resetOthers() {
 		$('.circle>div').not(this).removeClass("scale");
-		$('.circle>div>i').not(this).removeClass("disappear");
+		$('.circle>div>h4').not(this).removeClass("disappear");
 		$('.circle p').not(this).removeClass("appear");
 	}
 	function resetAll() {
 		$('.circle>div').removeClass("scale");
-		$('.circle>div>i').removeClass("disappear");
+		$('.circle>div>h4').removeClass("disappear");
 		$('.circle p').removeClass("appear");
 		return;
 	}
 	$('.circle>div').click(function () {
 		resetOthers();
 		$(this).addClass("scale");
-		$(this).contents('i').addClass("disappear");
+		$(this).contents('h4').addClass("disappear");
 		$(this).contents('p').addClass("appear");
 	});
 	$('.circle>div').dblclick(function () {
 		resetAll();
-	});
+	});*/
 		//project btns
 	$('#projects .keyboard-btn').click(function () {
 		$('#projects .keyboard-btn').not(this).removeClass("btnClicked");

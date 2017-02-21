@@ -163,15 +163,19 @@ dl {
 }
 a {
     text-decoration: none;
-    color: #5F656D;
+    color: #211F21;
+	font-weight: 600;
 }
-a:hover, a:visited {
-    color: #000;
+a:hover {
+    color: #afb2b6;
 	font-weight: 600;
 }
 h1, h2, h3, h4 {
 	font-size: 20px;
 	text-transform: uppercase;
+}
+h1, h2 {
+	font-weight: 600;
 }
 h5 {
 	font-family: 'Lato-bold', sans-serif;
@@ -207,16 +211,20 @@ h5 {
 }
 .backTop i {
 	font-size: 32px;
-	color: #5F656D;
+	color: #211F21;
 }
-.backTop:active {
-	color: #5F656D;
+.backTop:hover i {
+	color: #afb2b6;
 }
 .hide {
     display: none!important;
 }
 .center {
 	text-align: center;
+}
+.middle {
+	display: block!important;
+	margin: 0 auto;
 }
 .error {
 	margin-top: 160px;
@@ -238,9 +246,25 @@ h5 {
 .twoThirds {
 	display: inline-block;
 }
+
 /*--------------------Header--------------------*/
 header {
 	margin-bottom: 64px;
+}
+#logo div {
+	font-size: 30px;
+}
+#logo div:first-child {
+	letter-spacing: 1px;
+	margin-top: -10px;
+}
+#logo div:nth-child(2) {
+	font-size: 25px;
+	margin: -27px 0 0 50px;
+}
+#logo div:last-child {
+	margin-top: -17px;
+	font-size: 32px;
 }
 nav {
 	text-align: right;
@@ -542,6 +566,12 @@ footer {
 	padding: 0 8px;
 	font-size: 24px;
 }
+#social a {
+	color: #211F21;
+}
+#social a:hover {
+	color: #afb2b6;
+}
 /*--------------------Mobile--------------------*/
 @media screen and (max-width: 480px){
 	.twoThirds, .threeThirds {
@@ -647,8 +677,8 @@ footer {
         width: 66%;
 		max-width: 528px;
     }
-    .threeThirds {
-        width: 100%;
+    .fourFifths {
+        width: 80%;
     }
 	#photo {
 		width: 120px;
@@ -702,7 +732,4 @@ footer {
 		transform: scale(1.2);
 		filter: none;
 	}
-	#code > div > div.row.center {
-	width: 80%;
-}
 }

@@ -17,58 +17,25 @@ window.onload = function () {
             }
         });
     });
-		//project btns
-	$('#projects .keyboard-btn').click(function () {
-		$('#projects .keyboard-btn').not(this).removeClass("btnClicked");
-		$(this).addClass("btnClicked");
-	});
-	$('#projects .keyboard-btn').dblclick(function () {
-		$('#projects .keyboard-btn').removeClass("btnClicked");
-	});
-		//logos
-	$('a.logo img').click(function () {
-		$('a.logo img').not(this).removeClass("logoClicked");
-		$(this).addClass("logoClicked");
-	});
-	$('a.logo img').dblclick(function () {
-		$('a.logo img').removeClass("logoClicked");
-	});
-	
-	//projects keyboard
-	$('#projects-keyboard>li').click(function () {
-		var screen = $('#projects-screen'),
-			currentProject = $(this).contents('ul').clone(),
-			slideOne = currentProject.contents('li:nth-child(1), li:nth-child(2)'),
-			slideTwo = currentProject.contents('li:nth-child(1), li:nth-child(3), li:nth-child(4), li:nth-child(5)'),
-			slideThree = currentProject.contents('li:nth-child(6)'),
-			slides = new Array(slideOne, slideTwo, slideThree),
-			slideNumber = slides.length,
-			slideCounter = 0,
-			next = $('.next-btn'),
-			prev = $('.prev-btn');
-		currentProject.removeClass('hide');
-		next.removeClass('hide');
-		prev.removeClass('hide');
-		screen.contents().replaceWith(slides[slideCounter]);
 		
-		next.click(function () {
-			if (slideCounter === slideNumber - 1) {
-				slideCounter = 0;
-			} else {
-				slideCounter++;
-			}
-			screen.contents().replaceWith(slides[slideCounter]);
-		});
-	
-		prev.click(function () {
-			if (slideCounter === 0) {
-				slideCounter = slideNumber - 1;
-			} else {
-				slideCounter--;
-			}
-			screen.contents().replaceWith(slides[slideCounter]);
-		});
-	});
+	//sanwitch menu
+	(function () {
+		"use strict";
+		var header = $('#header');
+		var toggles = document.querySelectorAll(".c-hamburger");
+		for (var i = toggles.length - 1; i >= 0; i--) {
+			var toggle = toggles[i];
+			toggleHandler(toggle);
+		};
+		function toggleHandler(toggle) {
+			toggle.addEventListener( "click", function(e) {
+				e.preventDefault();
+				(this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");	
+				($("#header").hasClass("high") === true) ? $("#header").removeClass("high") : $("#header").addClass("high");
+				($("#nav").hasClass("show") === true) ? $("#nav").removeClass("show") : $("#nav").addClass("show");
+			});
+		}
+	})();
 	
 	//back top button 
 	var offset = 300,

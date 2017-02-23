@@ -64,7 +64,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<h2>Contacts</h2>
 			</div>
 			<div class="twoThirds">
-				<p>Wanna talk about your next project? To share your project ideas or check my availability, please drop me a line</p>			
+				<p>To share your project ideas or check my availability, please drop me a line below.</p>		
+				<form  method="post" action="http://formspree.io/assen.velichkov@gmail.com" method="post">
+					<div class="formGroup">
+						<label for="nameInput">name*</label>
+						<input name="name" id="nameInput" type="text" placeholder="John Atanasov" required>
+					</div>
+					<div class="formGroup">
+						<label for="emailInput">email*</label>
+						<input name="_replyto" id="emailInput" type="text" placeholder="john.atanasov@mail.com" required>
+					</div>
+					<div class="formGroup">
+						<label for="messageInput">message*</label>
+						<textarea name="message" id="messageInput" placeholder="hi, wanna talk about my new project ..." required></textarea>	
+					</div>
+					<div class="formGroup">
+						<input type="submit" value="send">
+					</div>	
+				</form>
 			</div>
 		</div>
 	</section>
@@ -74,8 +91,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </a>
 <footer>
 	<div class="container row">
-		<div>asen velichkov <span class="currentYear"></span> &copy; all rights reserved</div>
-		<div id="social">
+		<div id="copy" class="twoThirds"><span class="currentYear"></span> &copy; asen velichkov</div>
+		<div id="social" class="oneThird">
 			<ul>
 				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
